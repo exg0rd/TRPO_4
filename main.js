@@ -30,6 +30,10 @@ switch (operation) {
         result = number1 * number2;
         break;
     case "divide":
+        if (number2 === 0) {
+            console.error("Ошибка: деление на ноль невозможно.");
+            process.exit(1);
+        }
         result = number1 / number2;
         break;
     default:
