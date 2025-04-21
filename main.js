@@ -35,10 +35,22 @@ switch (operation) {
             process.exit(1);
         }
         result = number1 / number2;
+    case "power":
+        let res = 1;
+        if (number2 > 0) {
+            for (let i = 0; i < number2; i++) {
+                res *= number1;
+            }
+        } else {
+            for (let i = 0; i < -number2; i++) {
+                res = res / number1;
+            }
+        }
+        result = res;
         break;
     default:
         console.error(
-            "Ошибка: недопустимая операция. Доступные операции: add, subtract, multiply, divide."
+            "Ошибка: недопустимая операция. Доступные операции: add, subtract, multiply, divide, power"
         );
         process.exit(1);
 }
