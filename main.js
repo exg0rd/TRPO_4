@@ -48,6 +48,8 @@ switch (operation) {
         }
         result = res;
         break;
+    case "nroot":
+        result = Math.pow(number1, 1 / number2);
     default:
         console.error(
             "Ошибка: недопустимая операция. Доступные операции: add, subtract, multiply, divide, power"
